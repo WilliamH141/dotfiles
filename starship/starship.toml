@@ -1,0 +1,4 @@
+command_timeout = 5000
+
+[python]
+disabled = true
