@@ -103,7 +103,7 @@ S = 'secondary'
 M = 'secondary'
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
+if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
