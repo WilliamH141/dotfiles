@@ -47,7 +47,7 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # Fullscreen
-alt-shift-f = 'fullscreen'
+alt-shift-t = 'fullscreen'
 
 # Tab between last two workspaces
 alt-tab = 'workspace-back-and-forth'
@@ -69,13 +69,19 @@ alt-shift-5 = 'move-node-to-workspace 5'
 # Named workspaces
 alt-c = 'workspace C'
 alt-d = 'workspace D'
-alt-s = 'workspace S'
+alt-f = 'workspace F'
 alt-m = 'workspace M'
+alt-n = 'workspace N'
+alt-r = 'workspace R'
+alt-s = 'workspace S'
 
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-d = 'move-node-to-workspace D'
-alt-shift-s = 'move-node-to-workspace S'
+alt-shift-f = 'move-node-to-workspace F'
 alt-shift-m = 'move-node-to-workspace M'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-r = 'move-node-to-workspace R'
+alt-shift-s = 'move-node-to-workspace S'
 
 # Service mode
 alt-shift-semicolon = 'mode service'
@@ -101,6 +107,9 @@ C = 'secondary'
 D = 'secondary'
 S = 'secondary'
 M = 'secondary'
+F = 'secondary'
+N = 'secondary'
+R = 'secondary'
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
@@ -115,10 +124,6 @@ if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.reminders'
-run = 'move-node-to-workspace C'
-
-[[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S'
 
@@ -129,3 +134,15 @@ run = 'move-node-to-workspace M'
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace D'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace F'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = 'move-node-to-workspace N'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = 'move-node-to-workspace R'
