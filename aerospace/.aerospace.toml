@@ -2,11 +2,20 @@
 
 after-login-command = []
 after-startup-command = []
+start-at-login = true
 
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 
-# Gaps between windows and screen edges
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[key-mapping]
+preset = 'qwerty'
+
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
@@ -17,48 +26,70 @@ outer.bottom = 8
 
 [mode.main.binding]
 
-# Focus windows with alt + h/j/k/l (vim style)
+# Focus
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
 
-# Move windows with alt + shift + h/j/k/l
+# Move
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-# Switch workspaces with alt + number
+# Resize
+alt-minus = 'resize smart -50'
+alt-equal = 'resize smart +50'
+
+# Layouts
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+
+# Fullscreen
+alt-shift-f = 'fullscreen'
+
+# Tab between last two workspaces
+alt-tab = 'workspace-back-and-forth'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+# Numbered workspaces
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 
-# Move window to workspace with alt + shift + number
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
 alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 
-# Toggle layouts
-alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
+# Named workspaces
+alt-c = 'workspace C'
+alt-d = 'workspace D'
+alt-s = 'workspace S'
+alt-m = 'workspace M'
 
-# Close window
-alt-shift-q = 'close'
+alt-shift-c = 'move-node-to-workspace C'
+alt-shift-d = 'move-node-to-workspace D'
+alt-shift-s = 'move-node-to-workspace S'
+alt-shift-m = 'move-node-to-workspace M'
 
-# Reload config
-alt-shift-semicolon = 'reload-config'
+# Service mode
+alt-shift-semicolon = 'mode service'
 
-# Resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
 
-# Fullscreen
-alt-shift-f = 'fullscreen'
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'
@@ -66,3 +97,31 @@ alt-shift-f = 'fullscreen'
 3 = 'main'
 4 = 'secondary'
 5 = 'secondary'
+C = 'secondary'
+D = 'secondary'
+S = 'secondary'
+M = 'secondary'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.reminders'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace M'
