@@ -5,18 +5,40 @@ My personal macOS config files for:
 - **JankyBorders** — window borders for AeroSpace
 - **WezTerm** — terminal emulator
 - **Starship** — shell prompt
+- **Zsh** — shell config and aliases
+- **Git** — global git config and ignore
 
 ## Setup
 
-Clone the repo and use Stow to symlink the configs:
+### 1. Install Apple's command line tools
 
-```bash
+```zsh
+xcode-select --install
+```
+
+### 2. Clone the repo
+
+```zsh
 git clone https://github.com/WilliamH141/dotfiles.git ~/dotfiles
+```
+
+### 3. Install Homebrew and all packages
+
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle --file ~/dotfiles/brew/Brewfile
+```
+
+### 4. Symlink configs with Stow
+
+```zsh
 cd ~/dotfiles
 brew install stow
-brew install FelixKratz/formulae/borders
 stow aerospace
 stow borders
-stow wezterm
+stow brew
+stow git
 stow starship
+stow wezterm
+stow zsh
 ```
