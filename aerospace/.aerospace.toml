@@ -1,7 +1,8 @@
 # ~/.aerospace.toml
 
 after-login-command = []
-after-startup-command = ['exec-and-forget ~/.config/borders/bordersrc']
+# borders now runs as a login service via `brew services start borders`
+after-startup-command = []
 start-at-login = true
 
 enable-normalization-flatten-containers = true

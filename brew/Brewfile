@@ -1,6 +1,7 @@
 tap "felixkratz/formulae"
 tap "nikitabobko/tap"
 brew "figlet"
+brew "gh"
 brew "git"
 brew "git-filter-repo"
 brew "spicetify-cli"
