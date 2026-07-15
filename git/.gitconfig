@@ -5,6 +5,12 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rebase]
+	autostash = true
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = code --wait

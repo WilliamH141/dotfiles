@@ -31,14 +31,9 @@ brew bundle --file ~/dotfiles/brew/Brewfile
 
 ### 4. Symlink configs with Stow
 
+Stow is installed via the Brewfile in step 3.
+
 ```zsh
 cd ~/dotfiles
-brew install stow
-stow aerospace
-stow borders
-stow brew
-stow git
-stow starship
-stow wezterm
-stow zsh
+stow */
 ```
