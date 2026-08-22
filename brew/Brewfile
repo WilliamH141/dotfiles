@@ -1,19 +1,51 @@
-tap "felixkratz/formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "nikitabobko/tap"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# General-purpose scripting language
+brew "php"
+# Dependency Manager for PHP
+brew "composer"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Banner-like program prints strings as ASCII art
 brew "figlet"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Quickly rewrite git repository history
 brew "git-filter-repo"
+# NCurses Disk Usage
+brew "ncdu"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Tools for and transforming and inspecting PDF files
+brew "qpdf"
+# Command-line tool to customize Spotify client
 brew "spicetify-cli"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-brew "felixkratz/formulae/borders"
-cask "nikitabobko/tap/aerospace"
+# JavaScript package manager
+brew "yarn"
+cask "aerospace"
+# Chromium based browser
 cask "arc"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
+# Orchestrates virtual Ubuntu instances
+cask "multipass"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 vscode "angular.ng-template"
 vscode "bradlc.vscode-tailwindcss"
@@ -21,7 +53,6 @@ vscode "csstools.postcss"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
 vscode "formulahendry.code-runner"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "johnpapa.angular2"
 vscode "johnpapa.vscode-peacock"
@@ -52,3 +83,8 @@ vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-java-upgrade"
 vscode "vscjava.vscode-maven"
+npm "@angular/cli"
+npm "@anthropic-ai/claude-code"
+npm "@expo/ngrok"
+npm "corepack"
+npm "pnpm"
